@@ -16,9 +16,9 @@ public class Paddle : MonoBehaviour {
 
 		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y , 0f); //keep current y
 
-		float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16; //find position of mouse and set to game units (16)
+		float mousePosInBlocks = Input.mousePosition.x / Screen.width * 9; //find position of mouse and set to game units (16)
 
-		paddlePos.x = Mathf.Clamp(mousePosInBlocks, 0.5f , 15.5f); //restrict to screen
+		paddlePos.x = Mathf.Clamp(mousePosInBlocks, 0.5f , 8.5f); //restrict to screen
 
 		this.transform.position = paddlePos;
 

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-	public Paddle paddle;
-
+	private Paddle paddle;
 	private Vector3 paddleToBallVector; //distance between ball and paddle
-
 	private Rigidbody2D ball;
-	private bool hasStarted = false;
+	private bool hasStarted = false; 
 
 
 	// Use this for initialization
 	void Start () {
+
+		paddle = GameObject.FindObjectOfType<Paddle> (); //find paddles
 
 		paddleToBallVector = this.transform.position - paddle.transform.position;
 
@@ -24,6 +24,8 @@ public class Ball : MonoBehaviour {
 	void Update () {
 
 		if (!hasStarted) {
+			
+			//lock ball to paddle
 			this.transform.position = paddle.transform.position + paddleToBallVector;
 		}
 
@@ -32,6 +34,7 @@ public class Ball : MonoBehaviour {
 			hasStarted = true;
 
 			this.ball.velocity = new Vector2 (2f, 10f);
+
 		}
 		
 	}
