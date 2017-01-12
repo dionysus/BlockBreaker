@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d5d02e3cec2450440b9d5cbf9e66913f
-timeCreated: 1484167302
+guid: 78631a29dff2b57448666a32b453c39b
+timeCreated: 1484254179
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -94,7 +94,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: FullBricks
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

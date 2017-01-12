@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+
+
 	//public to make accessible outside of class
 	public void LoadLevel (string name) {  
-		
+
 		Debug.Log ("LoadLevel requested for:" + name); //use debug.log to output to console for testing
 
 		SceneManager.LoadScene (name);
@@ -26,8 +28,17 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadNextLevel(){
 
-		Application.LoadLevel (Application.loadedLevel + 1);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+		//Application.LoadLevel (Application.loadedLevel + 1);
 
+	}
+
+	public void BrickDestroyed (){
+
+		if (Brick.breakableCount <= 0){
+			LoadNextLevel ();
+		}
+	
 	}
 
 }

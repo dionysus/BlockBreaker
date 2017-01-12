@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
+	public AudioClip crack;
+
 	private Paddle paddle;
 	private Vector3 paddleToBallVector; //distance between ball and paddle
 	private Rigidbody2D ball;
@@ -27,15 +29,28 @@ public class Ball : MonoBehaviour {
 			
 			//lock ball to paddle
 			this.transform.position = paddle.transform.position + paddleToBallVector;
+
+			if (Input.GetMouseButtonDown (0)) {
+
+				hasStarted = true;
+
+				this.ball.velocity = new Vector2 (2f, 10f);
+
+			}
+
 		}
-
-		if (Input.GetMouseButtonDown (0)) {
-		
-			hasStarted = true;
-
-			this.ball.velocity = new Vector2 (2f, 10f);
-
-		}
-		
+			
 	}
+
+
+	void OnCollisionEnter2D (Collision2D collision) {
+
+		//AudioSource.PlayClipAtPoint
+		//audio.Play();
+
+		if (!hasStarted) {
+			this.GetComponent<AudioSource> ().Play();
+		}
+	}
+
 }
