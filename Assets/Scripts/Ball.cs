@@ -32,7 +32,7 @@ public class Ball : MonoBehaviour {
 
 				hasStarted = true;
 
-				this.ball.velocity = new Vector2 (2f, 8f);
+				this.ball.velocity = new Vector2 (8f, 2f);
 
 			}
 		}

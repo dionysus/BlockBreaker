@@ -6,7 +6,7 @@ public class Paddle : MonoBehaviour {
 
 	public bool autoPlay = false;
 
-	public float minX, maxX;
+	public float minY, maxY;
 
 	private Ball ball;
 
@@ -28,9 +28,9 @@ public class Paddle : MonoBehaviour {
 
 	void MoveWithMouse (){
 
-		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y , 0f); //keep current y
-		float mousePosInBlocks = Input.mousePosition.x / Screen.width * 9; //find position of mouse and set to game units (16)
-		paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX , maxX); //restrict to screen
+		Vector3 paddlePos = new Vector3 (this.transform.position.x, 8f, 0f); //keep current y
+		float mousePosInBlocks = Input.mousePosition.y / Screen.height * 9; //find position of mouse and set to game units (16)
+		paddlePos.y = Mathf.Clamp(mousePosInBlocks, minY , maxY); //restrict to screen
 		this.transform.position = paddlePos;
 	
 	}
@@ -38,8 +38,8 @@ public class Paddle : MonoBehaviour {
 
 	void AutoPlay (){
 		
-		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y , 0f); //keep current y 
-		paddlePos.x = Mathf.Clamp(ball.transform.position.x, minX , maxX);
+		Vector3 paddlePos = new Vector3 (this.transform.position.x, 8f, 0f); //keep current y 
+		paddlePos.y = Mathf.Clamp(ball.transform.position.y, minY, maxY);
 		this.transform.position = paddlePos;
 
 	}
