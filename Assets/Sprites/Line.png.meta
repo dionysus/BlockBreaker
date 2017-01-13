@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 725f5f3331b9245d3a083f9319434393
-timeCreated: 1484253624
+guid: f808932ebbed843ce9aa57679cc70067
+timeCreated: 1484284560
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: brick02 0hit
-    21300002: block_unagi_SS_01
-    21300004: block_unagi_SS_00
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -37,10 +34,10 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 4
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 120
@@ -95,35 +92,9 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: block_unagi_SS_00
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 41
-        width: 128
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: block_unagi_SS_01
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
-  spritePackingTag: Bricks
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 

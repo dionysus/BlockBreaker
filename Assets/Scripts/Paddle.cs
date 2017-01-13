@@ -4,23 +4,44 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
+	public bool autoPlay = false;
 
+	public float minX, maxX;
 
-	// Use this for initialization
+	private Ball ball;
+
 	void Start () {
-		
+
+		ball = GameObject.FindObjectOfType<Ball> ();
+
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 
+		if (!autoPlay) {
+			MoveWithMouse ();
+		} else {
+			AutoPlay ();
+		}
+			
+	}
+
+	void MoveWithMouse (){
+
 		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y , 0f); //keep current y
-
 		float mousePosInBlocks = Input.mousePosition.x / Screen.width * 9; //find position of mouse and set to game units (16)
+		paddlePos.x = Mathf.Clamp(mousePosInBlocks, minX , maxX); //restrict to screen
+		this.transform.position = paddlePos;
+	
+	}
 
-		paddlePos.x = Mathf.Clamp(mousePosInBlocks, 0.5f , 8.5f); //restrict to screen
 
+	void AutoPlay (){
+		
+		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y , 0f); //keep current y 
+		paddlePos.x = Mathf.Clamp(ball.transform.position.x, minX , maxX);
 		this.transform.position = paddlePos;
 
 	}
+
 }

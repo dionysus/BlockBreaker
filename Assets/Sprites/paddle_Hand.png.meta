@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 725f5f3331b9245d3a083f9319434393
-timeCreated: 1484253624
+guid: 036d8eab13e5c4460a0a96092a144850
+timeCreated: 1484280551
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: brick02 0hit
-    21300002: block_unagi_SS_01
-    21300004: block_unagi_SS_00
+    21300000: paddle_Hand_L
+    21300002: paddle_Hand_R
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -43,7 +42,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 60
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -97,33 +96,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: block_unagi_SS_00
+      name: paddle_Hand_L
       rect:
         serializedVersion: 2
         x: 0
-        y: 41
-        width: 128
-        height: 41
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: block_unagi_SS_01
+      name: paddle_Hand_R
       rect:
         serializedVersion: 2
-        x: 0
+        x: 120
         y: 0
-        width: 128
-        height: 41
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
-  spritePackingTag: Bricks
+  spritePackingTag: 
   userData: 
   assetBundleName: 
   assetBundleVariant: 
